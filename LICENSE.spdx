@@ -1,0 +1,16 @@
+SPDXVersion: SPDX-2.1
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+PackageName: taqyon
+PackageLicenseConcluded: (MIT OR Apache-2.0)
+PackageSupplier: Organization: Lorenzo Lazzeri
+PackageHomePage: https://taqyon.com
+PackageCopyrightText: 2025, Lorenzo Lazzeri
+PackageSummary: <text>Taqyon is a Qt-based framework for building desktop applications using a web frontend.
+                </text>
+Created: 2025-05-14T09:00:00Z
+PackageDownloadLocation: git://github.com/taqyon-app/taqyon
+PackageDownloadLocation: git+https://github.com/taqyon-app/taqyon.git
+PackageDownloadLocation: git+ssh://github.com/taqyon-app/taqyon.git
+Creator: Person: Lorenzo Lazzeri
+DocumentNamespace: https://taqyon.com/spdx/taqyon_project_license.spdx

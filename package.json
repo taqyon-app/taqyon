@@ -1,0 +1,23 @@
+{
+  "name": "taqyon-app",
+  "version": "1.0.0",
+  "description": "Orchestrates frontend and backend for Taqyon projects",
+  "dependencies": {
+    "inquirer": "^12.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "cross-env": "^7.0.0",
+    "wait-on": "^7.0.0"
+  },
+  "scripts": {
+    "frontend:dev": "npm run --if-present --prefix frontend start",
+    "frontend:build": "npm run --if-present --prefix frontend build",
+    "backend:build": "cd backend && cmake -B build && cmake --build build",
+    "backend:run:unix": "cd backend/build && ./myapp",
+    "backend:run:win": "cd backend/build && myapp.exe",
+    "backend:run": "cross-env-shell \"if [ \\\"$OS\\\" = \\\"Windows_NT\\\" ]; then npm run backend:run:win; else npm run backend:run:unix; fi\"",
+    "start": "concurrently -k -r -s first \"npm run frontend:dev\" \"npm run backend:build && wait-on tcp:localhost:3000 && npm run backend:run\"",
+    "build": "npm run frontend:build && npm run backend:build && npm run backend:run"
+  }
+}
