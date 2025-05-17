@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taqyon App</title>
+    <!-- QWebChannel Loader - comes first to ensure it's loaded before the app -->
+    <script src="qwebchannel-loader.js"></script>
+    <script>
+      console.log("🔥 Taqyon Qt+Vue application starting...");
+      // Try to load QWebChannel from Qt directly
+      if (typeof QWebChannel === 'undefined') {
+        document.write('<script src="qrc:///qtwebchannel/qwebchannel.js"><\/script>');
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

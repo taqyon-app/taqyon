@@ -31,13 +31,17 @@ message(STATUS "All required Qt6 components found, including WebEngine")
 
 # Create the executable
 add_executable({{projectName}}
-    main.cpp
-    backendobject.cpp
-    backendobject.h
-    mywebview.cpp
-    mywebview.h
-    mywebpage.cpp
-    mywebpage.h
+    app/main.cpp
+    backend/backendobject.cpp
+    backend/backendobject.h
+    app/mywebview.cpp
+    app/mywebview.h
+    app/mywebpage.cpp
+    app/mywebpage.h
+    app/mainwindow.cpp
+    app/mainwindow.h
+    app/app_setup.cpp
+    app/app_setup.h
 )
 
 

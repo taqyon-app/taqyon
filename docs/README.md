@@ -12,4 +12,23 @@ This section provides detailed documentation for various aspects of the Taqyon C
 
 ---
 
-For a general overview and quick start, please refer to the main [README.md](../README.md) in the root directory. 
+## 🧩 App Architecture & Extensibility
+
+The Qt/C++ backend template is designed for modularity and extensibility. Key UI features and their structure:
+
+- **Menu Bar:** The main window includes a minimal menu bar with a "Help" menu and an "About" action.
+- **About Dialog:** Selecting "About" opens a dialog with application information.
+- **System Tray Icon:** A system tray icon is present while the app is running, providing "Show" (restores the main window) and "Quit" actions for user convenience.
+- **Modular Structure:**
+  - The main window and all UI logic are encapsulated in the `MainWindow` class (`app/mainwindow.h`, `app/mainwindow.cpp`).
+  - Application setup logic (initialization, configuration) is separated into `app_setup.h` and `app_setup.cpp` for clarity and easier extension.
+
+These features provide a robust starting point for building more complex Qt/C++ backends. You can extend the menu, dialogs, or tray actions by modifying the respective classes.
+
+
+> **Note:**
+> All frontend frameworks (React, Vue, Svelte) support both JavaScript and TypeScript.
+> You can select your preferred language when creating a project.
+> See the main [README.md](../README.md) for details on language selection and template naming.
+
+For a general overview and quick start, please refer to the main [README.md](../README.md) in the root directory.

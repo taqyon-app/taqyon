@@ -1,9 +1,17 @@
 {
+  "type": "module",
   "name": "taqyon-app",
   "version": "1.0.0",
   "description": "Orchestrates frontend and backend for Taqyon projects",
+  "bin": {
+    "taqyon": "./cli/index.js"
+  },
+  "files": [
+    "cli/"
+  ],
   "dependencies": {
-    "inquirer": "^12.6.1"
+    "inquirer": "^12.6.1",
+    "commander": "^11.1.0"
   },
   "devDependencies": {
     "concurrently": "^8.0.0",
